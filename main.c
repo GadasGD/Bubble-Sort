@@ -20,12 +20,12 @@ int main()
         988,
         12,
     };
-    int n = sizeof(arr) / 4;
+    int size = sizeof(arr) / 4;
 
-    print_array(arr, 1, n);
-    for (int i = 0; i < n - 1; i++)
+    print_array(arr, 1, size);
+    for (int i = 0; i < size - 1; i++)
     {
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = 0; j < size - i - 1; j++)
         {
             if (arr[j] > arr[j + 1])
             {
@@ -39,7 +39,7 @@ int main()
             }
         }
     }
-    print_array(arr, 0, n);
+    print_array(arr, 0, size);
     printf("Count - %d\t\t\t\t Count swap - %d\n", count, count_swap);
     return 0;
 }
@@ -73,7 +73,6 @@ void print_array(int arr[], int k, int n)
         {
             printf("]");
         }
-        
-    }
+        }
     printf("\n");
 }
